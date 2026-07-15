@@ -1,64 +1,67 @@
-# Evaluation of Microprocessors and Case Study of the Intel 8086 Microprocessor
+# HealthHelper AI: Intelligent Symptom Checker
 
-**Course:** Microprocessor Systems and Interfacing  
-**Submitted By:** Sumaira Safeer
-**Program:** BS Computer Engineering  
-**Institution:** COMSATS University Islamabad, Attock Campus  
-**Submitted To:** Akbar Aki Khan
+**RAG-based AI Symptom Checker using Sentence-Transformers + FAISS + Flan-T5**
+
+**Author:** Sumaira Safeer (FA22-BCE-019)  
+**Course:** Artificial Intelligence / Applied Machine Learning  
+**Institution:** COMSATS University Islamabad, Attock Campus
 
 ---
 
 ## 📌 Project Overview
-This assignment provides a comprehensive **evaluation of microprocessors** along with a detailed **case study of the Intel 8086 microprocessor**. It covers the evolution of microprocessors across generations, key performance parameters, architectural differences (CISC vs RISC), and an in-depth analysis of the 8086 processor — one of the most influential 16-bit microprocessors in computing history.
+
+**HealthHelper AI** is a prototype intelligent symptom checker built using a **Retrieval-Augmented Generation (RAG)** pipeline. It retrieves relevant medical knowledge from a curated knowledge base and generates natural language answers to health-related questions using a large language model.
+
+The system was developed in Google Colab and deployed as a live **Streamlit** web application using **ngrok**.
 
 ---
 
-## 🛠️ Topics Covered
-### 1. Evaluation of Microprocessors
-- Performance metrics (Clock Speed, Data Width, Instruction Set)
-- Architecture Features (CISC vs RISC, Multi-core, Power Efficiency)
-- Evolution Timeline of Microprocessors (1971 – Present)
+## 🛠️ Tech Stack
 
-### 2. Intel 8086 Microprocessor Case Study
-- Architecture and internal organization
-- Pin diagram and functions
-- Memory addressing and segmentation
-- Instruction set and addressing modes
-- Comparison with contemporaries (8085, 80286, etc.)
+- **Embeddings**: `sentence-transformers` (`all-MiniLM-L6-v2`)
+- **Vector Database**: FAISS (Facebook AI Similarity Search)
+- **Generation Model**: `google/flan-t5-base`
+- **Frontend**: Streamlit
+- **Deployment**: Google Colab + ngrok
+
+---
+
+## ✨ Key Features
+
+- Semantic search over a curated knowledge base of 50+ symptom-to-condition statements
+- Retrieval-Augmented Generation (RAG) pipeline
+- Clean and interactive Streamlit UI
+- Real-time answers with retrieved context shown
+- Public deployment via ngrok tunnel
 
 ---
 
 ## 📁 Repository Contents
-| Folder     | Description                                      |
-|------------|--------------------------------------------------|
-| `Report/`  | Full assignment report (PDF)                     |
-| `Images/`  | Supporting diagrams and tables (if added)        |
+
+| Folder       | Description                                      |
+|--------------|--------------------------------------------------|
+| `Report/`    | Full project report (DOCX)                       |
+| `Code/`      | Full Colab notebook code                         |
+| `app.py`     | Clean Streamlit application code                 |
+| `requirements.txt` | Python dependencies                         |
+| `video/`     | Screen recording of the live app (optional)      |
 
 ---
 
-## 📊 Evolution of Microprocessors (Summary)
-| Microprocessor | Year | Word Length | Memory          | Pins | Clock Speed    |
-|----------------|------|-------------|------------------|------|----------------|
-| Intel 4004     | 1971 | 4-bit       | 1 KB             | 16   | 750 kHz        |
-| Intel 8085     | 1976 | 8-bit       | 64 KB            | 40   | 3–6 MHz        |
-| **Intel 8086** | 1978 | **16-bit**  | **1 MB**         | 40   | **5–8 MHz**    |
-| Intel 80286    | 1982 | 16-bit      | 16 MB real / 4 GB virtual | 68 | 6–12.5 MHz |
-| Intel 80386    | 1985 | 32-bit      | 4 GB real / 64 TB virtual | 132 | 20–33 MHz  |
-| Intel 80486    | 1989 | 32-bit      | 4 GB real / 64 TB virtual | 168 | 25–100 MHz |
+## 🚀 How to Run Locally
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
 
----
+  3. Run the app:
+     ```bash
+     streamlit run app.py
 
-## 📄 Report
-The complete assignment including detailed explanations, diagrams, and analysis is available in the `Report/` folder.
-
----
 
 ## 👩‍🎓 Author
+
 **Sumaira Safeer**  
-Computer Engineer 
+BS Computer Engineering (Final Year)  
 COMSATS University Islamabad, Attock Campus  
 [LinkedIn](https://www.linkedin.com/in/sumaira-safeer-948804418/)
-
----
-
-*This work demonstrates understanding of microprocessor evolution, architecture, and the foundational role of the Intel 8086 in modern computing.*
